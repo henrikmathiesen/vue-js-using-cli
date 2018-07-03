@@ -1,16 +1,17 @@
 <template>
+
   <div class="HomePage">
     <h2>Get started building your robot</h2>
   </div>
+  
 </template>
 
 <script>
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'HomeComponent'
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
