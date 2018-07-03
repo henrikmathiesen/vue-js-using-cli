@@ -1,7 +1,7 @@
 <template>
 
 <header>
-    <h1><span>|||</span><span> Robot builder </span><span>|||</span></h1>
+    <h1><span>:::</span><span> Vue.js with the CLI </span><span>:::</span></h1>
     <nav>
         <ul>
             <li>

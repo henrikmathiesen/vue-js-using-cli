@@ -1,7 +1,12 @@
 <template>
 
   <div class="HomePage">
-    <h2>Get started building your robot</h2>
+    <h2>An image here for now</h2>
+    <img src="../assets/logo.png" />
+    <p>
+      Prefer the assets folder, instead of public folder for static files.
+      Can also place images in a feature folder in src (it doesnt has to be assets folder).
+    </p>
   </div>
   
 </template>
@@ -19,6 +24,11 @@ export default {
 
 h2 {
   margin-top:0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 </style>

@@ -3,7 +3,8 @@
   <div id="app">
     <HeaderComponent />
     <main>
-      <HomeComponent />
+      <!--<HomeComponent />-->
+      <GalleryComponent />
     </main>
   </div>
 
@@ -11,12 +12,14 @@
 
 <script>
 
+import GalleryComponent from './components/GalleryComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import HomeComponent from './components/HomeComponent.vue';
 
 export default {
   name: 'app',
   components: {
+    GalleryComponent,
     HeaderComponent,
     HomeComponent
   }
