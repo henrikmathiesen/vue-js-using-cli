@@ -3,9 +3,7 @@
   <div id="app">
     <HeaderComponent />
     <main>
-      <!--<HomeComponent />-->
-      <!--<GalleryComponent />-->
-      <CommunicationComponent />
+      <router-view />
     </main>
   </div>
 
@@ -13,18 +11,12 @@
 
 <script>
 
-import CommunicationComponent from './components/CommunicationComponent/CommunicationComponent'; // .vue is optional
-import GalleryComponent from './components/GalleryComponent.vue';
-import HeaderComponent from './components/HeaderComponent.vue';
-import HomeComponent from './components/HomeComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue'; // .vue is optional
 
 export default {
   name: 'app',
   components: {
-    CommunicationComponent,
-    GalleryComponent,
     HeaderComponent,
-    HomeComponent
   }
 }
 

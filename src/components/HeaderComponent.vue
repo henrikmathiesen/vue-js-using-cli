@@ -5,13 +5,30 @@
     <nav>
         <ul>
             <li>
-                <a href="#">Home</a>
+                <router-link :to="{ name: 'Home' }">Home</router-link>
+                <!-- Can reference the name of the route like this, or use the syntax bellow -->
             </li>
             <li>
-                <a href="#">Foo</a>
+                <router-link to="/gallery">Gallery</router-link>
+            </li>
+            <li>
+                <router-link to="/communication">Communication</router-link>
             </li>
         </ul>
     </nav>
+
+    <!--
+      Active link get CSS classes applied by Vue:
+      'router-link-exact-active' and 'router-link-active'
+
+      Can use <router-link active-class="foo"> to give active class a custom name
+      Is there a matching for exact-active? If not, we can use the exact attribute
+      on <router-link> to make the active class exact match.
+
+      Apply CSS class to parent element:
+      https://router.vuejs.org/api/#applying-active-class-to-outer-element
+    -->
+
 </header>
 
 </template>
