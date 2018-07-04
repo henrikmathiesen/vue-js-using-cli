@@ -1,6 +1,6 @@
 <template>
 
-  <div class="HomePage">
+  <div class="HomeComponent">
     <h2>An image here for now</h2>
     <img src="../assets/logo.png" />
     <p>

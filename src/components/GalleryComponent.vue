@@ -1,7 +1,8 @@
 <template>
 
-<div>
-    <h2>{{ selectedHead.title }} <span v-if="selectedHead.onSale">(On Sale!)</span></h2>
+<div class="GalleryComponent">
+    <!-- can use [headBorderStyle, moreStyles] for multiple calculate properties for style, the last will override if conflict -->
+    <h2 :style="headBorderStyle">{{ selectedHead.title }} <span v-if="selectedHead.onSale">(On Sale!)</span></h2>
     <div>
         <img :src="selectedHead.src" />
         <!-- short hand for v-bind:src -->
@@ -16,7 +17,7 @@
         <button @click="addHeadToCart()">Add to Cart</button>
     </div>
     <div>
-        <h2>Cart <span v-if="!cart.length">(empty)</span></h2>
+        <h3>Cart <span v-if="!cart.length">(empty)</span></h3>
         <table v-if="cart.length">
             <thead>
                 <tr>
@@ -83,6 +84,12 @@ export default {
     computed: {
         selectedHead(){
             return parts.heads[this.selectedIndex];
+        },
+        headBorderStyle(){
+            return {
+                // can use 'background-color' / backgroundColor for hyphens
+                'color': this.selectedHead.onSale ? 'gold' : ''
+            }
         }
     }
 }
@@ -90,6 +97,10 @@ export default {
 </script>
 
 <style scoped>
+
+h2 {
+  margin-top:0;
+}
 
 img {
   max-width: 100%;
