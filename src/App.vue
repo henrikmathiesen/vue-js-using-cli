@@ -4,7 +4,8 @@
     <HeaderComponent />
     <main>
       <!--<HomeComponent />-->
-      <GalleryComponent />
+      <!--<GalleryComponent />-->
+      <CommunicationComponent />
     </main>
   </div>
 
@@ -12,6 +13,7 @@
 
 <script>
 
+import CommunicationComponent from './components/CommunicationComponent/CommunicationComponent'; // .vue is optional
 import GalleryComponent from './components/GalleryComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import HomeComponent from './components/HomeComponent.vue';
@@ -19,6 +21,7 @@ import HomeComponent from './components/HomeComponent.vue';
 export default {
   name: 'app',
   components: {
+    CommunicationComponent,
     GalleryComponent,
     HeaderComponent,
     HomeComponent
