@@ -1,8 +1,8 @@
 <template>
 
 <div class="GalleryComponent">
-    <!-- can use [headBorderStyle, moreStyles] for multiple calculate properties for style, the last will override if conflict -->
-    <h2 :style="headBorderStyle">{{ selectedHead.title }} <span v-if="selectedHead.onSale">(On Sale!)</span></h2>
+    <!-- can use [headStyle, moreStyles] for multiple calculate properties for style, the last will override if conflict -->
+    <h2 :style="headStyle">{{ selectedHead.title }} <span v-if="selectedHead.onSale">(On Sale!)</span></h2>
     <div>
         <img :src="selectedHead.src" />
         <!-- short hand for v-bind:src -->
@@ -27,8 +27,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- just a side note: never use v-if on a v-for element -->
-                <tr v-for="head in cart" :key="head.id">
+                <!-- IMPORTANT: Just a side note: never use v-if on a v-for element -->
+                <!-- If item is on sale both 1A and 1B apply, the last will override if conflict -->
+                <!-- Can use computed properties for class as well -->
+                <tr v-for="head in cart" :key="head.id" :class="{'app-some-border-1A': head.onSale, 'app-some-border-1B': head.onSale, 'app-some-border-2': !head.onSale }">
                     <td>{{ head.title }}</td>
                     <td>{{ head.cost }}</td>
                     <td>{{ head.amount }}</td>
@@ -85,7 +87,7 @@ export default {
         selectedHead(){
             return parts.heads[this.selectedIndex];
         },
-        headBorderStyle(){
+        headStyle(){
             return {
                 // can use 'background-color' / backgroundColor for hyphens
                 'color': this.selectedHead.onSale ? 'gold' : ''
@@ -109,6 +111,18 @@ img {
 
 button + button {
     margin-left: 5px;
+}
+
+.app-some-border-1A {
+    color: pink;
+}
+
+.app-some-border-1B {
+    color: gold;
+}
+
+.app-some-border-2 {
+    border: 2px solid gold;
 }
 
 </style>
