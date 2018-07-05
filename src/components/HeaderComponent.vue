@@ -14,6 +14,9 @@
             <li>
                 <router-link to="/communication">Communication</router-link>
             </li>
+            <li>
+                <router-link to="/directives-and-filters">Directives and Filters</router-link>
+            </li>
         </ul>
     </nav>
 

@@ -5,6 +5,7 @@ import HomeComponent from '../components/HomeComponent';
 import GalleryComponent from '../components/GalleryComponent';
 import CommunicationComponent from '../components/CommunicationComponent/CommunicationComponent';
 import NavigateToMeComponent from '../components/NavigateToMeComponent';
+import DirectiveAndFiltersComponent from '../components/DirectiveAndFiltersComponent';
 
 Vue.use(Router);
 
@@ -32,6 +33,11 @@ const routes = [
         // Use this to send route params as props instead
         // That way we dont couple the component with the router
         // See also NavigateToMeComponent
+    },
+    {
+        path: '/directives-and-filters',
+        name: 'DirectiveAndFilters',
+        component: DirectiveAndFiltersComponent
     }
 
     // Nested routes: https://router.vuejs.org/guide/essentials/nested-routes.html
