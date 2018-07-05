@@ -33,8 +33,13 @@ const routes = [
         // That way we dont couple the component with the router
         // See also NavigateToMeComponent
     }
+
+    // Nested routes: https://router.vuejs.org/guide/essentials/nested-routes.html
+    // Named views: https://router.vuejs.org/guide/essentials/named-views.html
+    // Route guards: https://router.vuejs.org/guide/advanced/navigation-guards.html
 ]
 
 export default new Router({
-    routes
+    routes,
+    //mode: 'history' , no hash sign in url
 });
