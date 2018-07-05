@@ -20,6 +20,7 @@
         // props: ['partType', 'id'],
         // Take route params as props, so we dont have to couple this component with the router
         // Also see router/index.js
+        // We could validate id like this: Number.isInteger(+value) , see PartComponent for custom prop validation
         computed: {
             part(){
                 const { partType, id } = this.$route.params; // if using route params as props: const { partType, id } = this;
