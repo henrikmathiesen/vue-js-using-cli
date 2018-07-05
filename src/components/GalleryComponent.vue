@@ -4,7 +4,7 @@
     <!-- can use [headStyle, moreStyles] for multiple calculate properties for style, the last will override if conflict -->
     <h2 :style="headStyle">{{ selectedHead.title }} <span v-if="selectedHead.onSale">(On Sale!)</span></h2>
     <div>
-        <img :src="selectedHead.src" />
+        <img class="app-selected-head" @click="navigateFromCode()" :src="selectedHead.src" />
         <!-- short hand for v-bind:src -->
     </div>
     <div>
@@ -88,6 +88,19 @@ export default {
             } else {
                 existsInCart.amount += 1;
             }
+        },
+        navigateFromCode(){
+            // this.$router.push('/navigate-to-me');
+            // Use this syntax for sending params
+            // Can also use this from the template with 
+            // <router-link :to="{ name: 'NavigateToMe', params: {...} }"></router-link>
+            this.$router.push({
+                name: 'NavigateToMe',
+                params: {
+                    partType: this.selectedHead.type,
+                    id: this.selectedHead.id
+                }
+            });
         }
     },
     computed: {
@@ -130,6 +143,10 @@ button + button {
 
 .app-some-border-2 {
     border: 2px solid gold;
+}
+
+.app-selected-head {
+    cursor:pointer;
 }
 
 </style>
