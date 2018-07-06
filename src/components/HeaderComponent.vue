@@ -7,6 +7,7 @@
             <li>
                 <router-link :to="{ name: 'Home' }">Home</router-link>
                 <!-- Can reference the name of the route like this, or use the syntax bellow -->
+                <!-- See GalleryComponent for navigating from code -->
             </li>
             <li>
                 <router-link to="/gallery">Gallery</router-link>

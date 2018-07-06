@@ -5,7 +5,7 @@
     <img src="../assets/logo.png" />
     <p>
       Prefer the assets folder, instead of public folder for static files.
-      Can also place images in a feature folder in src (it doesnt has to be assets folder).
+      Can also place images in a feature folder in src (it doesnt have to be the assets folder).
     </p>
   </div>
   
