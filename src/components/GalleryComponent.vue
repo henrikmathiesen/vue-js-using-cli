@@ -120,10 +120,6 @@ export default {
 
 <style scoped>
 
-h2 {
-  margin-top:0;
-}
-
 img {
   max-width: 100%;
   height: auto;

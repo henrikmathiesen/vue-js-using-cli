@@ -16,3 +16,8 @@ https://www.npmjs.com/package/connect-history-api-fallback
 
 Configure Webpack  
 https://cli.vuejs.org/guide/webpack.html
+
+### Vuex
+
+"Vuex is a state management pattern + library for Vue.js applications"  
+https://vuex.vuejs.org/

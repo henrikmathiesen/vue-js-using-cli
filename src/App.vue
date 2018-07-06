@@ -51,6 +51,10 @@ body {
   min-height:100%;
 }
 
+h2 {
+  margin-top:0;
+}
+
 </style>
 
 <style scoped>

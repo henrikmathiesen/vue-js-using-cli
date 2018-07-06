@@ -24,8 +24,6 @@
 // import PositionTooDirective from '../directives/position-too-directive';
 // import CurrencyFilter from '../filters/currency-filter';
 
-import CurrencyFilter from '../filters/currency-filter';
-
 export default {
     name: 'DirectiveAndFiltersComponent',
     // directives: {

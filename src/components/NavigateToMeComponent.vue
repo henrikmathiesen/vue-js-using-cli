@@ -30,11 +30,3 @@
     }
 
 </script>
-
-<style scoped>
-
-h2 {
-  margin-top:0;
-}
-
-</style>

@@ -22,10 +22,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-h2 {
-  margin-top:0;
-}
-
 img {
   max-width: 100%;
   height: auto;
